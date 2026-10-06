@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Cashier · Scan</title><link rel="stylesheet" href="fonts.css">
+
+<style>
+body{margin:0}
+*{box-sizing:border-box}
+button,input{font:inherit;color:inherit}
+</style>
+</head><body>
+
+<div style="width: 390px; height: 844px; overflow: hidden; background: #FFFFFF; color: #14202B; font-family: 'IBM Plex Sans', 'Noto Sans Ethiopic', system-ui, sans-serif; font-size: 16px; line-height: 1.45; display: flex; flex-direction: column">
+
+<header style="display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid #E2E6E3">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F6E6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4" /></svg>
+<div style="flex: 1; line-height: 1.25"><div style="font-weight: 600">Habesha Mart · Bole</div><div style="font-size: 13px; color: #536170">Liya Kebede · Cashier</div></div>
+<a href="#" aria-label="Switch to Amharic" style="padding: 6px 10px; border: 1px solid #D5DBD7; border-radius: 8px; font-size: 14px; color: #3D4A56; text-decoration: none">አማ</a>
+</header>
+
+<section aria-label="Camera" style="position: relative; height: 352px; background: #0E151B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; color: #E4E9ED">
+<div style="position: relative; width: 210px; height: 210px">
+<span style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-top: 4px solid #5FC2BC; border-left: 4px solid #5FC2BC; border-radius: 10px 0 0 0"></span>
+<span style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; border-top: 4px solid #5FC2BC; border-right: 4px solid #5FC2BC; border-radius: 0 10px 0 0"></span>
+<span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 40px; border-bottom: 4px solid #5FC2BC; border-left: 4px solid #5FC2BC; border-radius: 0 0 0 10px"></span>
+<span style="position: absolute; bottom: 0; right: 0; width: 40px; height: 40px; border-bottom: 4px solid #5FC2BC; border-right: 4px solid #5FC2BC; border-radius: 0 0 10px 0"></span>
+<span style="position: absolute; left: 16px; right: 16px; top: 104px; height: 2px; background: #5FC2BC; opacity: 0.7"></span>
+</div>
+<div style="font-size: 15px">Point at the receipt's QR code</div>
+<div style="position: absolute; left: 16px; right: 16px; bottom: 14px; display: flex; justify-content: space-between">
+<button type="button" style="height: 40px; padding: 0 14px; border: 1px solid #3A4753; border-radius: 999px; background: rgba(255,255,255,0.08); color: #E4E9ED; font-size: 14px">Torch</button>
+<button type="button" style="height: 40px; padding: 0 14px; border: 1px solid #3A4753; border-radius: 999px; background: rgba(255,255,255,0.08); color: #E4E9ED; font-size: 14px">From gallery</button>
+</div>
+</section>
+
+<form style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div>
+<label for="ref" style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px">Or type the reference or paste a link</label>
+<input id="ref" type="text" value="DLQ5T2W8NC" style="width: 100%; height: 52px; border: 1.5px solid #0F6E6A; border-radius: 10px; padding: 0 14px; font-family: 'IBM Plex Mono', monospace; font-size: 17px; outline: none">
+<div style="margin-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #17683A; font-weight: 500"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>telebirr detected</div>
+</div>
+<div>
+<label for="amt" style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px">Amount to receive (ETB)</label>
+<input id="amt" type="text" inputmode="decimal" value="2,180.00" style="width: 100%; height: 52px; border: 1px solid #D5DBD7; border-radius: 10px; padding: 0 14px; font-size: 18px; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums">
+</div>
+<a href="CashierVerified.html" style="height: 56px; border-radius: 10px; background: #0F6E6A; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px">Verify</a>
+</form>
+
+<nav aria-label="Cashier app" style="margin-top: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #E2E6E3; height: 64px">
+<a href="CashierScan.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: #0B5753; font-size: 12.5px; font-weight: 600; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h3v3h-3zM17 17h4v4h-4" /></svg>Verify</a>
+<a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: #536170; font-size: 12.5px; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v5h5M3.05 13A9 9 0 1 0 6 5.3L3 8M12 7v5l4 2" /></svg>Today · 14 checks</a>
+</nav>
+</div>
+</body></html>

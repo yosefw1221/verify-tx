@@ -1,0 +1,278 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Admin · Review workspace</title><link rel="stylesheet" href="fonts.css">
+
+<style>
+body{margin:0;background:#F6F7F5}
+*{box-sizing:border-box}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+table{border-collapse:collapse;width:100%}
+th{text-align:left;font-weight:500;font-size:12px;color:#536170;padding:8px 10px;border-bottom:1px solid #E2E6E3;background:#FAFBFA}
+td{padding:10px;border-bottom:1px solid #EEF0EE;font-size:13px;vertical-align:top}
+a{color:#0F6E6A}a:hover{color:#0B5753}
+</style>
+</head><body>
+
+<div style="min-height: 100vh; display: flex; background: #F6F7F5; color: #14202B; font-family: 'IBM Plex Sans', 'Noto Sans Ethiopic', system-ui, sans-serif; font-size: 14px; line-height: 1.45">
+
+<nav aria-label="Admin sections" style="flex: 0 0 64px; background: #14202B; color: #C9D2DA; padding: 16px 0; display: flex; flex-direction: column; align-items: center; gap: 4px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5FC2BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Proofline admin" role="img" style="margin-bottom: 16px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4" /></svg>
+
+<a href="Main.html" aria-label="Dashboard" title="Dashboard" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v9H3zM14 3h7v5h-7zM14 12h7v9h-7zM3 16h7v5H3z" /></svg>
+</a>
+
+<a href="AdminQueue.html" aria-label="Review queue" aria-current="page" title="Review queue" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: #22313E; color: #FFFFFF">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /></svg>
+</a>
+
+<a href="#" aria-label="Verifications" title="Verifications" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg>
+</a>
+
+<a href="#" aria-label="Tenants" title="Tenants" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M9 17h1M14 17h1" /></svg>
+</a>
+
+<a href="#" aria-label="Banks & egress" title="Banks & egress" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z" /></svg>
+</a>
+
+<a href="#" aria-label="Staff & roles" title="Staff & roles" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+</a>
+
+<a href="#" aria-label="Audit log" title="Audit log" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8" /></svg>
+</a>
+
+<a href="#" aria-label="Billing" title="Billing" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1zM16 8H8M16 12H8M13 16H8" /></svg>
+</a>
+
+<a href="#" aria-label="Settings" title="Settings" style="width: 44px; height: 44px; display: grid; place-items: center; border-radius: 8px; background: transparent; color: #9AA7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" /></svg>
+</a>
+
+</nav>
+
+<main style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column">
+
+<header style="min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 10px 24px; background: #FFFFFF; border-bottom: 1px solid #E2E6E3">
+<a href="AdminQueue.html" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-weight: 500; font-size: 13px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>Queue</a>
+<span style="width: 1px; height: 28px; background: #E2E6E3"></span>
+<div style="display: flex; flex-direction: column; line-height: 1.2">
+<span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px">RV-20418</span>
+<span style="font-size: 12px; color: #536170">Habesha Mart · order_88231</span>
+</div>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; border: 1px solid #D5DBD7; border-radius: 4px; padding: 2px 6px; background: #F6F7F5">TELEBIRR</span>
+<div style="display: flex; flex-direction: column; line-height: 1.2"><span style="font-size: 12px; color: #536170">Expected</span><span style="font-weight: 600; font-variant-numeric: tabular-nums">ETB 12,500.00</span></div>
+<span style="flex: 1"></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; border-radius: 999px; padding: 5px 12px; background: #FBF1DE; color: #7F5310; font-variant-numeric: tabular-nums"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 6v6l4 2" /></svg>05:48 left on SLA</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #536170"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4" /></svg>Locked to you · 8:12</span>
+<div style="display: flex; gap: 6px">
+<button type="button" aria-label="Previous task (K)" style="width: 34px; height: 34px; border: 1px solid #D5DBD7; border-radius: 6px; background: #FFFFFF; display: grid; place-items: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg></button>
+<button type="button" aria-label="Next task (J)" style="width: 34px; height: 34px; border: 1px solid #D5DBD7; border-radius: 6px; background: #FFFFFF; display: grid; place-items: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg></button>
+</div>
+</header>
+
+<div style="padding: 20px 24px 32px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px">
+
+<section aria-label="Receipt" style="flex: 45 1 500px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6E3; border-radius: 8px; overflow: hidden">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 10px 12px; border-bottom: 1px solid #E2E6E3">
+<button type="button" aria-label="Zoom out" style="width: 32px; height: 32px; border: 1px solid #E2E6E3; border-radius: 6px; background: #FFFFFF; font-size: 16px">−</button>
+<span style="min-width: 48px; text-align: center; font-size: 13px; font-variant-numeric: tabular-nums">100%</span>
+<button type="button" aria-label="Zoom in" style="width: 32px; height: 32px; border: 1px solid #E2E6E3; border-radius: 6px; background: #FFFFFF; font-size: 16px">+</button>
+<button type="button" aria-label="Rotate" style="width: 32px; height: 32px; border: 1px solid #E2E6E3; border-radius: 6px; background: #FFFFFF; display: grid; place-items: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5" /></svg></button>
+<button type="button" style="height: 32px; padding: 0 10px; border: 1px solid #E2E6E3; border-radius: 6px; background: #FFFFFF; font-size: 13px">Contrast</button>
+<div role="group" aria-label="Image version" style="display: flex; padding: 2px; gap: 2px; background: #F1F3F1; border-radius: 6px">
+<button type="button" aria-pressed="true" style="border: 0; border-radius: 4px; padding: 4px 10px; background: #FFFFFF; font-size: 13px; font-weight: 600">Original</button>
+<button type="button" aria-pressed="false" style="border: 0; border-radius: 4px; padding: 4px 10px; background: transparent; font-size: 13px; color: #536170">Enhanced</button>
+</div>
+<span style="flex: 1"></span>
+<a href="#" style="font-size: 13px; font-weight: 500">Open original</a>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #E7F4EC; color: #17683A; font-size: 13px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01l-3-3" /></svg>
+<span>QR code decoded · reference <b style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">DJK7Q4P2ZA</b> · bank detected: telebirr</span>
+</div>
+<div style="background: #2B3640; padding: 28px 16px; display: flex; justify-content: center">
+<div style="width: 300px; background: #FFFFFF; border-radius: 16px; padding: 22px 20px 20px; color: #1D2730; font-size: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35)">
+<div style="text-align: center; font-weight: 600; font-size: 13px">Transaction details</div>
+<div style="text-align: center; margin-top: 14px; color: #2E7D4F; font-weight: 600">Successful</div>
+<div style="text-align: center; font-size: 26px; font-weight: 700; margin-top: 2px; font-variant-numeric: tabular-nums">-12,500.00</div>
+<div style="text-align: center; color: #6B7680">(ETB)</div>
+<div style="margin-top: 16px; display: flex; flex-direction: column; gap: 7px">
+<div style="display: flex; justify-content: space-between; gap: 10px"><span style="color: #6B7680">Transaction type</span><span>Pay merchant</span></div>
+<div style="display: flex; justify-content: space-between; gap: 10px"><span style="color: #6B7680">Transaction number</span><span style="font-weight: 600">DJK7Q4P2ZA</span></div>
+<div style="display: flex; justify-content: space-between; gap: 10px"><span style="color: #6B7680">Transaction time</span><span>2026/10/04 10:14:52</span></div>
+<div style="display: flex; justify-content: space-between; gap: 10px"><span style="color: #6B7680">Paid to</span><span>HABESHA MART PLC</span></div>
+<div style="display: flex; justify-content: space-between; gap: 10px"><span style="color: #6B7680">Account</span><span>****4401</span></div>
+<div style="display: flex; justify-content: space-between; gap: 10px"><span style="color: #6B7680">Paid by</span><span>HANNA BEKELE</span></div>
+<div style="display: flex; justify-content: space-between; gap: 10px"><span style="color: #6B7680">Service fee</span><span>0.00</span></div>
+</div>
+<div style="margin: 18px auto 0; width: 116px; position: relative; padding: 8px">
+<div style="position: absolute; inset: 0; border: 2px solid #2BB3A8; border-radius: 6px"></div>
+<span style="position: absolute; top: -11px; right: -34px; background: #2BB3A8; color: #08332F; font-size: 10.5px; font-weight: 700; border-radius: 4px; padding: 1px 6px; font-family: 'IBM Plex Mono', monospace">QR read</span>
+<svg width="100" height="100" viewBox="0 0 21 21" shape-rendering="crispEdges" role="img" aria-label="QR code on the receipt">
+<rect width="21" height="21" fill="#FFFFFF" />
+<path fill="#1D2730" d="M0 0h7v7H0zM14 0h7v7h-7zM0 14h7v7H0z" />
+<path fill="#FFFFFF" d="M1 1h5v5H1zM15 1h5v5h-5zM1 15h5v5H1z" />
+<path fill="#1D2730" d="M2 2h3v3H2zM16 2h3v3h-3zM2 16h3v3H2zM8 0h1v1H8zM10 1h2v1h-2zM9 3h1v2H9zM11 4h2v1h-2zM8 6h1v1H8zM10 6h1v1h-1zM12 6h1v2h-1zM0 8h2v1H0zM3 8h1v2H3zM5 9h2v1H5zM8 8h3v1H8zM9 10h1v2H9zM11 9h1v1h-1zM13 9h2v1h-2zM16 8h1v2h-1zM18 9h3v1h-3zM1 11h1v1H1zM4 11h2v1H4zM7 11h1v2H7zM12 11h2v1h-2zM15 11h1v1h-1zM17 11h2v2h-2zM20 11h1v1h-1zM0 12h1v1H0zM10 13h1v1h-1zM13 13h1v2h-1zM15 13h3v1h-3zM19 13h2v1h-2zM8 14h2v1H8zM11 15h1v1h-1zM14 15h2v1h-2zM17 15h1v2h-1zM19 16h2v1h-2zM8 16h1v2H8zM10 17h2v1h-2zM13 17h2v1h-2zM9 19h1v2H9zM11 19h1v1h-1zM14 19h1v1h-1zM16 18h1v1h-1zM18 18h1v3h-1zM20 19h1v2h-1zM12 20h2v1h-2z" />
+</svg>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 10px 14px; font-size: 12px; color: #536170">
+<span>IMG_2041.jpg · 1.2 MB</span><span>Uploaded 10:16 via hosted link</span><span>EXIF stripped</span><span style="font-family: 'IBM Plex Mono', monospace">sha256 9f3c…a71e</span>
+</div>
+</section>
+
+<div style="flex: 32 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div role="status" style="display: flex; gap: 10px; padding: 14px 16px; border: 1px solid #EBD3A6; background: #FDF7EC; border-radius: 8px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B7791F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01" /></svg>
+<div style="font-size: 13px">
+<div style="font-weight: 600; color: #7F5310">Bank record unavailable: telebirr not answering</div>
+<div style="color: #5B4214; margin-top: 2px">No reply since 10:12 · 7 attempts, last at 10:39 (TLS handshake timeout). After you decide, we keep retrying for 72 h; if the bank disagrees, an approval is reversed.</div>
+</div>
+</div>
+
+<section style="background: #FFFFFF; border: 1px solid #E2E6E3; border-radius: 8px; overflow: hidden">
+<div style="padding: 14px 16px 10px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+<h2 style="margin: 0; font-size: 15px; font-weight: 600">Receipt against expectation</h2>
+<span style="font-size: 12px; color: #536170">Read by QR + vision · 1.9 s</span>
+</div>
+<table>
+<thead><tr><th>Field</th><th>On receipt</th><th>Expected</th><th>Check</th></tr></thead>
+<tbody>
+
+<tr>
+<td style="color: #536170; white-space: nowrap">Reference</td>
+<td><div style="font-weight: 500">DJK7Q4P2ZA</div><div style="display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 11.5px; color: #536170"><span style="width: 7px; height: 7px; border-radius: 50%; background: #1F8A4C"></span>99% confidence</div></td>
+<td>—</td>
+<td><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: #17683A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Valid telebirr format</span></td>
+</tr>
+
+<tr>
+<td style="color: #536170; white-space: nowrap">Amount</td>
+<td><div style="font-weight: 500">ETB 12,500.00</div><div style="display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 11.5px; color: #536170"><span style="width: 7px; height: 7px; border-radius: 50%; background: #1F8A4C"></span>98% confidence</div></td>
+<td>ETB 12,500.00</td>
+<td><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: #17683A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Matches</span></td>
+</tr>
+
+<tr>
+<td style="color: #536170; white-space: nowrap">Paid to</td>
+<td><div style="font-weight: 500">HABESHA MART PLC</div><div style="display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 11.5px; color: #536170"><span style="width: 7px; height: 7px; border-radius: 50%; background: #1F8A4C"></span>95% confidence</div></td>
+<td>Habesha Mart PLC</td>
+<td><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: #17683A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Registered account</span></td>
+</tr>
+
+<tr>
+<td style="color: #536170; white-space: nowrap">Account</td>
+<td><div style="font-weight: 500">****4401</div><div style="display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 11.5px; color: #536170"><span style="width: 7px; height: 7px; border-radius: 50%; background: #B7791F"></span>92% confidence</div></td>
+<td>****4401</td>
+<td><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: #17683A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Matches</span></td>
+</tr>
+
+<tr>
+<td style="color: #536170; white-space: nowrap">Paid by</td>
+<td><div style="font-weight: 500">HANNA BEKELE</div><div style="display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 11.5px; color: #536170"><span style="width: 7px; height: 7px; border-radius: 50%; background: #1F8A4C"></span>96% confidence</div></td>
+<td>—</td>
+<td><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: #536170"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /></svg>For reference</span></td>
+</tr>
+
+<tr>
+<td style="color: #536170; white-space: nowrap">Paid at</td>
+<td><div style="font-weight: 500">4 Oct, 10:14</div><div style="display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 11.5px; color: #536170"><span style="width: 7px; height: 7px; border-radius: 50%; background: #1F8A4C"></span>97% confidence</div></td>
+<td>After 10:05</td>
+<td><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: #17683A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Inside window</span></td>
+</tr>
+
+<tr>
+<td style="color: #536170; white-space: nowrap">Status</td>
+<td><div style="font-weight: 500">Successful</div><div style="display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 11.5px; color: #536170"><span style="width: 7px; height: 7px; border-radius: 50%; background: #1F8A4C"></span>97% confidence</div></td>
+<td>—</td>
+<td><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: #17683A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Completed</span></td>
+</tr>
+
+</tbody>
+</table>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E2E6E3; border-radius: 8px; padding: 14px 16px">
+<h2 style="margin: 0 0 8px; font-size: 15px; font-weight: 600">Risk signals and history</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+
+<li style="display: flex; gap: 8px; align-items: flex-start"><span style="flex: none; margin-top: 2px; font-size: 11px; font-weight: 600; border-radius: 4px; padding: 1px 6px; background: #EAF1FC; color: #2457B0">INFO</span><span>First payment from this payer at Habesha Mart.</span></li>
+
+<li style="display: flex; gap: 8px; align-items: flex-start"><span style="flex: none; margin-top: 2px; font-size: 11px; font-weight: 600; border-radius: 4px; padding: 1px 6px; background: #E7F4EC; color: #17683A">OK</span><span>Image not seen before, exact or similar.</span></li>
+
+<li style="display: flex; gap: 8px; align-items: flex-start"><span style="flex: none; margin-top: 2px; font-size: 11px; font-weight: 600; border-radius: 4px; padding: 1px 6px; background: #E7F4EC; color: #17683A">OK</span><span>Reference not claimed by any merchant.</span></li>
+
+<li style="display: flex; gap: 8px; align-items: flex-start"><span style="flex: none; margin-top: 2px; font-size: 11px; font-weight: 600; border-radius: 4px; padding: 1px 6px; background: #E7F4EC; color: #17683A">OK</span><span>No editing traces in the file metadata.</span></li>
+
+</ul>
+</section>
+</div>
+
+<div style="flex: 23 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section aria-label="Decision" style="background: #FFFFFF; border: 1px solid #E2E6E3; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 8px; padding: 10px 12px; background: #EAF1FC; border-radius: 6px; color: #1E4A94; font-size: 12.5px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-4M12 8h.01" /></svg>
+<span><b style="font-weight: 600">Second approval needed.</b> Above Habesha Mart's ETB 10,000 threshold, so your approval goes to a Review Lead before the merchant is told.</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" style="height: 48px; border: 0; border-radius: 6px; background: #1F8A4C; color: #FFFFFF; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px">Approve<kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #5BB37F; border-radius: 4px; padding: 0 5px">A</kbd></button>
+<button type="button" style="height: 48px; border: 1.5px solid #C2362F; border-radius: 6px; background: #FFFFFF; color: #A12A24; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px">Reject<kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #EDC1BE; border-radius: 4px; padding: 0 5px">R</kbd></button>
+</div>
+<div>
+<label for="reason" style="display: block; font-size: 12.5px; font-weight: 500; margin-bottom: 4px">Reason <span style="color: #536170; font-weight: 400">· required to reject</span></label>
+<select id="reason" style="width: 100%; height: 38px; border: 1px solid #D5DBD7; border-radius: 6px; padding: 0 10px; background: #FFFFFF">
+<option>Choose a reason…</option>
+<option>Receipt looks altered</option>
+<option>Receipt can't be read</option>
+<option>Paid to a different account</option>
+<option>Amount is less than expected</option>
+<option>Payment is too old</option>
+<option>Receipt already used</option>
+</select>
+</div>
+<div>
+<label for="note" style="display: block; font-size: 12.5px; font-weight: 500; margin-bottom: 4px">Note <span style="color: #536170; font-weight: 400">· required here</span></label>
+<textarea id="note" rows="3" style="width: 100%; border: 1px solid #D5DBD7; border-radius: 6px; padding: 8px 10px; resize: vertical; font-size: 13px">QR, amount and registered account all match. Bank down since 10:12.</textarea>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<button type="button" style="height: 38px; border: 1px solid #D5DBD7; border-radius: 6px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 13px"><span>Ask for a clearer image</span><kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #536170; border: 1px solid #D5DBD7; border-radius: 4px; padding: 0 5px">I</kbd></button>
+<button type="button" style="height: 38px; border: 1px solid #D5DBD7; border-radius: 6px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 13px"><span>Escalate to a Review Lead</span><kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #536170; border: 1px solid #D5DBD7; border-radius: 4px; padding: 0 5px">E</kbd></button>
+</div>
+<div style="padding-top: 12px; border-top: 1px solid #EEF0EE; display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<div style="font-size: 12.5px; color: #536170; line-height: 1.4">Last bank try 10:39, timeout<br>Next automatic try 10:44</div>
+<button type="button" style="height: 34px; padding: 0 12px; border: 1px solid #0F6E6A; border-radius: 6px; background: #FFFFFF; color: #0B5753; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5" /></svg>Try bank now</button>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E2E6E3; border-radius: 8px; padding: 14px 16px">
+<h2 style="margin: 0 0 10px; font-size: 15px; font-weight: 600">Timeline</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+
+<li style="display: flex; gap: 10px; font-size: 12.5px"><span style="width: 38px; flex: none; color: #536170; font-variant-numeric: tabular-nums">10:14</span><span style="width: 8px; height: 8px; flex: none; margin-top: 5px; border-radius: 50%; background: #8A949E"></span><span>Paid, per the receipt</span></li>
+
+<li style="display: flex; gap: 10px; font-size: 12.5px"><span style="width: 38px; flex: none; color: #536170; font-variant-numeric: tabular-nums">10:15</span><span style="width: 8px; height: 8px; flex: none; margin-top: 5px; border-radius: 50%; background: #5B6B7A"></span><span>Created by API · order_88231 · bank timed out 3 times</span></li>
+
+<li style="display: flex; gap: 10px; font-size: 12.5px"><span style="width: 38px; flex: none; color: #536170; font-variant-numeric: tabular-nums">10:15</span><span style="width: 8px; height: 8px; flex: none; margin-top: 5px; border-radius: 50%; background: #2F6FDB"></span><span>Receipt needed · upload link sent</span></li>
+
+<li style="display: flex; gap: 10px; font-size: 12.5px"><span style="width: 38px; flex: none; color: #536170; font-variant-numeric: tabular-nums">10:16</span><span style="width: 8px; height: 8px; flex: none; margin-top: 5px; border-radius: 50%; background: #2F6FDB"></span><span>Receipt uploaded · QR read · bank still down</span></li>
+
+<li style="display: flex; gap: 10px; font-size: 12.5px"><span style="width: 38px; flex: none; color: #536170; font-variant-numeric: tabular-nums">10:16</span><span style="width: 8px; height: 8px; flex: none; margin-top: 5px; border-radius: 50%; background: #B7791F"></span><span>In review · platform queue, 30 min SLA</span></li>
+
+<li style="display: flex; gap: 10px; font-size: 12.5px"><span style="width: 38px; flex: none; color: #536170; font-variant-numeric: tabular-nums">10:38</span><span style="width: 8px; height: 8px; flex: none; margin-top: 5px; border-radius: 50%; background: #0F6E6A"></span><span>Claimed by you</span></li>
+
+</ol>
+</section>
+
+<p style="margin: 0; font-size: 12px; color: #536170">Keys: A approve · R reject · I clearer image · E escalate · J / K next / previous</p>
+</div>
+
+</div>
+</main>
+</div>
+</body></html>
